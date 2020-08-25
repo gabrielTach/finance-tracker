@@ -23,8 +23,10 @@ gem 'jbuilder', '~> 2.7'
 # Use authentification with devise
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
-
+# Stock data
 gem 'iex-ruby-client'
+# Font awesome for the icons
+gem 'font-awesome-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
