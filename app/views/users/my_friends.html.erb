@@ -1,4 +1,16 @@
 <h1>My Friends</h1>
+<%= form_tag search_friend_path, remote: true, method: :get do %>
+  <div class="input-group mb-2">
+    <%= text_field_tag :friend, params[:friend], placeholder: 'Name or Email', autofocus: true, class: "form-control" %>
+    <div class="input-group-append">
+      <%= button_tag type: :submit, class: "btn btn-success" do %>
+      <%= fa_icon 'search' %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div id="results" class="mb-2">
+</div>
 <% if !@friends.empty? %>
   <%= render 'users/friends' %>
 <% end %>
